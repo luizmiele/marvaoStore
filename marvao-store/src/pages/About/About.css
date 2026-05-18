@@ -1,0 +1,76 @@
+.about-hero {
+  position: relative; height: 60vh; max-height: 600px;
+  display: flex; align-items: center; justify-content: center; overflow: hidden;
+}
+.about-hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center; }
+.about-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.52); }
+.about-hero-content { position: relative; z-index: 2; text-align: center; color: white; }
+.about-hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(40px, 7vw, 80px); font-weight: 700; margin-bottom: 16px;
+}
+.about-hero-content p { font-size: 17px; opacity: 0.8; font-weight: 300; }
+
+.about-section {
+  max-width: 1200px; margin: 0 auto; padding: 80px 40px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+}
+
+.about-eyebrow {
+  display: block; font-size: 11px; font-weight: 600;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 14px;
+}
+
+.about-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 38px; font-weight: 700; margin-bottom: 20px; line-height: 1.15;
+}
+.about-text p { font-size: 15px; line-height: 1.8; color: var(--mid); margin-bottom: 14px; }
+
+.about-img-wrap { overflow: hidden; }
+.about-img-wrap img { width: 100%; aspect-ratio: 4/5; object-fit: cover; display: block; }
+
+.about-values {
+  background: var(--dark); padding: 80px 40px;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px;
+  max-width: 100%;
+}
+
+.value-card { color: rgba(255,255,255,0.8); }
+.value-num {
+  display: block; font-family: 'Playfair Display', serif;
+  font-size: 48px; font-weight: 700; color: rgba(255,255,255,0.12);
+  margin-bottom: 4px; line-height: 1;
+}
+.value-card h3 { font-size: 18px; font-weight: 600; color: white; margin-bottom: 12px; }
+.value-card p { font-size: 14px; line-height: 1.7; }
+
+.about-team {
+  text-align: center; padding: 80px 40px;
+  background: var(--cream); border-top: 1px solid var(--border);
+}
+.about-team-inner { max-width: 600px; margin: 0 auto; }
+.about-team h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px; font-weight: 700; margin-bottom: 16px;
+}
+.about-team p { font-size: 15px; line-height: 1.7; color: var(--mid); margin-bottom: 32px; }
+
+.btn-dark {
+  display: inline-block; padding: 14px 40px;
+  background: var(--dark); color: white;
+  font-size: 12px; font-weight: 600; letter-spacing: 0.12em;
+  text-transform: uppercase; text-decoration: none;
+  transition: background 0.2s;
+}
+.btn-dark:hover { background: #333; }
+
+@media (max-width: 900px) {
+  .about-section { grid-template-columns: 1fr; gap: 36px; padding: 56px 20px; }
+  .about-values { grid-template-columns: 1fr 1fr; gap: 28px; }
+  .about-team { padding: 56px 20px; }
+}
+@media (max-width: 520px) {
+  .about-values { grid-template-columns: 1fr; }
+}

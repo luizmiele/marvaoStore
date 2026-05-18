@@ -1,0 +1,32 @@
+.sale-hero {
+  background: var(--accent);
+  text-align: center;
+  padding: 72px 40px 56px;
+  color: white;
+}
+.sale-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(72px, 14vw, 160px);
+  font-weight: 700;
+  line-height: 0.9;
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+.sale-hero p { font-size: 16px; opacity: 0.85; margin-bottom: 28px; font-weight: 300; }
+.sale-badge-row { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+.sale-badge {
+  padding: 6px 16px; border: 1px solid rgba(255,255,255,0.4);
+  font-size: 12px; letter-spacing: 0.08em; font-weight: 500;
+  border-radius: 100px;
+}
+.sale-content { max-width: 1400px; margin: 0 auto; padding: 56px 40px; }
+.sale-header { margin-bottom: 36px; }
+.sale-header h2 { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; margin-bottom: 4px; }
+.sale-header p { font-size: 14px; color: var(--light); }
+.sale-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+
+@media (max-width: 1100px) { .sale-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 768px) {
+  .sale-grid { grid-template-columns: repeat(2, 1fr); }
+  .sale-content { padding: 40px 20px; }
+}
